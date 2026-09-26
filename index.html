@@ -260,6 +260,73 @@
       .site-head{height:68px}.discipline{font-size:9px}.brand-discipline{display:none}.wordmark-main{font-size:27px}.wordmark-inc{font-size:6px;margin-left:7px}.menu-toggle{display:block;margin-left:auto}.nav{position:absolute;left:0;right:0;top:68px;background:var(--paper);border-bottom:1px solid var(--line);padding:18px var(--pad) 26px;display:none;flex-direction:column;align-items:stretch}.nav.open{display:flex}.nav-link{font-size:27px;padding:9px 0;letter-spacing:-.03em}.nav-link:after{display:none}.project-link{margin:9px 0 0;text-align:center}.view{min-height:calc(100vh - 68px)}
       .hero{min-height:calc(100vh - 68px);grid-template-columns:1fr;padding-top:66px}.hero h1{font-size:clamp(58px,19vw,98px)}.hero-copy{margin-top:0}.hero-side{grid-column:1;align-self:end}.feature-caption{align-items:start;flex-direction:column;gap:14px}.feature-caption span{text-align:left}.feature-image{height:62vh;min-height:460px}.intro,.chapter-top,.about-lead,.industries-head,.path-head{grid-template-columns:1fr;gap:34px}.path-grid{grid-template-columns:1fr}.path-step,.path-step+ .path-step{padding:22px 0;border-right:0;border-bottom:1px solid #444;min-height:190px}.path-step:last-child{border-bottom:0}.home-cta{align-items:flex-end}.home-cta strong{max-width:280px}.contact-form{grid-template-columns:1fr}.field.wide{grid-column:1}.contact-stage{padding-bottom:65px}.intro h2{font-size:48px}.service-row{grid-template-columns:42px 1fr auto;gap:12px}.service-row p{display:none}.chapter{padding-top:65px}.chapter h1{font-size:70px}.chapter .deck{grid-column:1;margin-top:22px}.service-catalog{padding-top:45px}.service-item{grid-template-columns:38px 1fr;gap:16px;padding:30px 0}.service-item p{grid-column:2;font-size:16px}.work-grid{grid-template-columns:1fr;padding-top:36px}.work-card,.work-card:nth-child(2),.work-card:nth-child(3){grid-column:1;margin-top:34px}.work-card:first-child{margin-top:0}.work-card .frame{aspect-ratio:1.25/1}.work-meta{grid-template-columns:1fr}.tag{justify-self:start}.about-lead{padding:70px 0 100px}.industry{grid-template-columns:35px 1fr;gap:16px}.industry p{grid-column:2;font-size:16px}.principles-grid{grid-template-columns:1fr}.principle{min-height:220px}.contact-stage h1{font-size:64px}.contact-bottom{grid-template-columns:1fr;gap:48px}footer{min-height:160px;align-items:flex-start;flex-direction:column;gap:30px}
     }
+    /* Phone layout: keep the editorial scale while giving every block room to reflow. */
+    @media(max-width:760px){
+      :root{--pad:20px}
+      .site-head{padding-left:max(var(--pad),env(safe-area-inset-left));padding-right:max(var(--pad),env(safe-area-inset-right))}
+      .menu-toggle{min-width:52px;min-height:44px;padding:10px 0;text-align:right}
+      .nav{max-height:calc(100dvh - 68px);overflow-y:auto;padding-bottom:max(26px,env(safe-area-inset-bottom));box-shadow:0 18px 34px color-mix(in srgb,var(--ink) 12%,transparent)}
+      .nav-link{min-height:46px;display:flex;align-items:center}
+      .project-link{min-height:48px;display:grid;place-items:center}
+      .hero{display:flex;flex-direction:column;min-height:auto;gap:0;padding-top:44px;padding-bottom:30px}
+      .hero h1{font-size:clamp(50px,15.7vw,70px);line-height:.86;letter-spacing:-.065em;text-wrap:wrap}
+      .hero-line{overflow:visible;padding:0 .04em .12em;margin:0 -.04em -.12em}
+      .hero-line+ .hero-line{margin-top:.05em}
+      .hero-copy{font-size:19px;line-height:1.4;margin-top:34px;max-width:34ch}
+      .hero-side{width:100%;margin-top:46px;padding-top:12px;align-items:center;font-size:10px;gap:12px}
+      .scroll-cue{gap:8px}.scroll-cue:before{width:24px}
+      .marquee{padding:15px 0;font-size:18px}.marquee span{gap:20px;padding-right:20px}
+      .feature-image{height:108vw;min-height:380px;max-height:520px}
+      .feature-caption{inset:auto var(--pad) 22px;gap:12px;mix-blend-mode:normal;text-shadow:0 1px 18px rgba(0,0,0,.5)}
+      .feature-caption b{font-size:38px;max-width:9ch}.feature-caption span{font-size:10px;line-height:1.45}
+      .intro{padding-top:64px;padding-bottom:70px;gap:24px}
+      .intro h2,.statement{font-size:clamp(36px,11vw,46px);line-height:1;letter-spacing:-.05em}
+      .label{font-size:10px}
+      .service-row{grid-template-columns:30px minmax(0,1fr) 26px;gap:12px;min-height:108px;padding:24px 0}
+      .service-row h3{font-size:clamp(27px,8.5vw,34px);line-height:1;overflow-wrap:anywhere}
+      .service-row .num{font-size:16px;align-self:start;padding-top:5px}
+      .service-row .arrow{font-size:25px;align-self:center}
+      .production-path{padding:72px 0}
+      .path-head{margin-bottom:42px;gap:22px}.path-head h2{font-size:42px;line-height:.96}
+      .path-step,.path-step+ .path-step{min-height:0;padding:26px 0;gap:34px}
+      .path-step h3{font-size:30px}.path-step p{font-size:16px;line-height:1.5}
+      .home-cta{margin-top:34px;padding-top:28px}.home-cta strong{font-size:34px;line-height:1}.home-cta span{font-size:46px}
+      .chapter{padding-top:54px;padding-bottom:42px}
+      .chapter-top{gap:22px}.chapter h1{font-size:clamp(50px,15vw,64px);line-height:.88;letter-spacing:-.065em}
+      .chapter .deck{font-size:19px;line-height:1.45;margin-top:10px}
+      .service-catalog{padding-top:34px;padding-bottom:86px}
+      .service-item{grid-template-columns:28px minmax(0,1fr);gap:12px 14px;padding:27px 0}
+      .service-item .n{font-size:16px;padding-top:5px}.service-item h2{font-size:clamp(28px,8.8vw,36px);line-height:1}
+      .service-item > div{grid-column:2;min-width:0}
+      .service-item p{font-size:16px;line-height:1.5}.service-item strong{font-size:10px;line-height:1.4;margin-bottom:8px}
+      .work-grid{padding:34px var(--pad) 88px;gap:0}
+      .work-card,.work-card:nth-child(2),.work-card:nth-child(3){margin-top:58px}.work-card:first-child{margin-top:0}
+      .work-card .frame{aspect-ratio:4/3}.work-meta{padding-top:13px;gap:10px}.work-meta h2{font-size:34px}.work-meta p{font-size:15px}
+      .tag{font-size:10px;padding:7px 10px}.work-note{margin-top:54px;font-size:15px;line-height:1.55}
+      .about-lead{padding:62px 0 82px;gap:22px}.about-lead p{font-size:25px;line-height:1.15}
+      .industries{padding:72px 0}.industries-head{gap:22px;margin-bottom:44px}.industries h2{font-size:43px;line-height:.94}
+      .industry{grid-template-columns:26px minmax(0,1fr);gap:12px;padding:27px 0}.industry h3{font-size:31px;line-height:1}.industry p{font-size:16px;line-height:1.5}
+      .principles{padding:76px 0}.principles-grid{margin-top:32px}.principle{min-height:0;padding:27px;gap:42px}.principle b{font-size:25px}.principle h3{font-size:26px}
+      .contact-stage{min-height:auto;padding-top:54px;padding-bottom:72px}
+      .contact-stage h1{font-size:clamp(52px,16vw,68px);line-height:.86}
+      .contact-bottom{margin-top:58px;gap:46px}.contact-copy{font-size:19px;line-height:1.45;margin-bottom:32px}
+      .contact-details{gap:9px}.contact-details a{font-size:18px;margin-bottom:7px}
+      .contact-form{gap:18px;padding-top:20px}.field{gap:6px}.field input,.field textarea,.field select{font-size:17px;min-height:48px}
+      .field textarea{min-height:120px}.send-btn{width:100%;min-height:50px}.form-status{line-height:1.4}
+      footer{padding:32px var(--pad) max(32px,env(safe-area-inset-bottom));min-height:190px;gap:38px}
+      footer b{font-size:36px;line-height:.95}.footer-signature{align-items:flex-start}.footer-signature .wordmark-main{font-size:31px}
+    }
+    @media(max-width:390px){
+      :root{--pad:18px}
+      .wordmark-main{font-size:25px}
+      .hero h1{font-size:clamp(47px,15vw,59px)}
+      .hero-copy{font-size:18px}.hero-side{font-size:9px}
+      .feature-caption b{font-size:34px}
+      .intro h2,.statement{font-size:35px}
+      .service-row h3{font-size:27px}
+      .chapter h1{font-size:49px}
+      .contact-stage h1{font-size:51px}
+    }
     @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.view.active,.marquee,.reveal,.intro-screen,.intro-screen span,.view.active .hero-line>span,.view.active .hero-copy,.view.active .hero-side,.view.active .feature-image:after,.view.active .frame:after,.discipline:before,.service-row.service-motion.seen:after,.service-row.service-motion.seen h3,.service-item.focused,.service-item.focused h2{animation:none!important;transition:none!important}.intro-screen,.service-transition,.home-transition{display:none}.reveal,.hero-copy,.hero-side{opacity:1;transform:none}.hero-line>span{transform:none}.feature-image:after,.frame:after,.service-row.service-motion:after{display:none}.feature-image img,.work-card img{transition:none;transform:none!important}}
   </style>
 </head>
@@ -299,10 +366,10 @@
         <h2>From one essential shot to a complete visual system, we make complex stories feel <em>immediate.</em></h2>
       </section>
       <section class="services-preview wrap">
-        <a class="service-row service-motion" href="#services" data-transition="FILM"><span class="num">01</span><h3>Film & video</h3><p>B-roll, product films, testimonials, tours and explainers — planned around the audience.</p><span class="arrow">↗</span></a>
-        <a class="service-row service-motion" href="#services" data-transition="PHOTO"><span class="num">02</span><h3>Photography</h3><p>Purpose-built imagery with the light, detail and point of view your brand needs.</p><span class="arrow">↗</span></a>
-        <a class="service-row service-motion" href="#services" data-transition="AERIAL"><span class="num">03</span><h3>Aerial & time-lapse</h3><p>Scale, progress and perspective captured from vantage points ordinary cameras miss.</p><span class="arrow">↗</span></a>
-        <a class="service-row service-motion" href="#services" data-transition="MOTION"><span class="num">04</span><h3>Motion & animation</h3><p>Clear visual explanations that turn technical information into something memorable.</p><span class="arrow">↗</span></a>
+        <a class="service-row service-motion" href="#services/01" data-transition="FILM"><span class="num">01</span><h3>Film & video</h3><p>B-roll, product films, testimonials, tours and explainers — planned around the audience.</p><span class="arrow">↗</span></a>
+        <a class="service-row service-motion" href="#services/06" data-transition="PHOTO"><span class="num">02</span><h3>Photography</h3><p>Purpose-built imagery with the light, detail and point of view your brand needs.</p><span class="arrow">↗</span></a>
+        <a class="service-row service-motion" href="#services/05" data-transition="AERIAL"><span class="num">03</span><h3>Aerial & time-lapse</h3><p>Scale, progress and perspective captured from vantage points ordinary cameras miss.</p><span class="arrow">↗</span></a>
+        <a class="service-row service-motion" href="#services/07" data-transition="MOTION"><span class="num">04</span><h3>Motion & animation</h3><p>Clear visual explanations that turn technical information into something memorable.</p><span class="arrow">↗</span></a>
       </section>
       <section class="intro wrap reveal"><div class="label">Built for context</div><p class="statement">Real estate. Travel. Industry. Film. Wherever the story lives, we build a crew and process around <em>the brief.</em></p></section>
       <section class="production-path"><div class="wrap">
@@ -382,13 +449,22 @@
         document.querySelectorAll('.view.active .reveal:not(.seen),.view.active .service-motion:not(.seen)').forEach(function(el){obs.observe(el)});
       }
       function route(){
-        var name=(location.hash||'#home').slice(1).split('/')[0];
+        var parts=(location.hash||'#home').slice(1).split('/');
+        var name=parts[0],serviceId=parts[1];
         if(pages.indexOf(name)<0) name='home';
         document.querySelectorAll('.view').forEach(function(v){v.classList.toggle('active',v.getAttribute('data-page')===name)});
         document.querySelectorAll('.nav-link').forEach(function(a){var on=a.getAttribute('data-route')===name;a.classList.toggle('active',on);if(on)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
         menu.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='Menu';
         window.scrollTo(0,0);document.title=(name==='home'?'Video Production & Photography | Kenira Inc.':name.charAt(0).toUpperCase()+name.slice(1)+' | Kenira Inc.');
-        requestAnimationFrame(reveal);
+        requestAnimationFrame(function(){
+          reveal();
+          if(name==='services'&&serviceId){
+            var target=document.querySelector('.service-item[data-service="'+serviceId+'"]');
+            if(target){
+              setTimeout(function(){target.scrollIntoView({behavior:reduceMotion?'auto':'smooth',block:'center'});target.classList.remove('focused');void target.offsetWidth;target.classList.add('focused')},80);
+            }
+          }
+        });
       }
       function onScroll(){
         var doc=document.documentElement;
@@ -411,7 +487,7 @@
         var transition=document.querySelector('.service-transition');
         transition.querySelector('span').textContent=link.getAttribute('data-transition');
         transition.classList.remove('play');void transition.offsetWidth;transition.classList.add('play');
-        setTimeout(function(){location.hash='services'},380);
+        setTimeout(function(){location.hash=link.getAttribute('href')},380);
       })});
       var homeTransition=document.querySelector('.home-transition');
       document.querySelectorAll('[data-route="home"]').forEach(function(link){link.addEventListener('click',function(e){
