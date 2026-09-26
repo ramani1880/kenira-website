@@ -170,13 +170,8 @@
     .home-transition{position:fixed;inset:0;z-index:240;background:var(--night);color:var(--white);display:grid;place-items:center;visibility:hidden;clip-path:inset(0 100% 0 0);pointer-events:none}
     .home-transition:before,.home-transition:after{content:"";position:absolute;left:0;right:0;height:1px;background:color-mix(in srgb,var(--white) 24%,transparent);transform:scaleX(0)}
     .home-transition:before{top:calc(50% - 58px);transform-origin:left}.home-transition:after{bottom:calc(50% - 58px);transform-origin:right}
-    .home-transition .wordmark{color:var(--white);opacity:0;transform:translateY(18px)}
-    .home-transition .wordmark-main{font-size:clamp(58px,9vw,126px)}
-    .home-transition .wordmark-serif{color:var(--signal)}
-    .home-transition .wordmark-inc{font-size:clamp(8px,.8vw,12px);margin-left:13px}
     .home-transition.play{visibility:visible;pointer-events:auto;animation:homeTransition 1.05s cubic-bezier(.77,0,.18,1) both}
     .home-transition.play:before,.home-transition.play:after{animation:homeTransitionRule .5s cubic-bezier(.2,.72,.2,1) .29s both}
-    .home-transition.play .wordmark{animation:homeTransitionMark 1.05s cubic-bezier(.2,.72,.2,1) both}
     body.home-returning .view[data-page="home"].active{animation:none}
     body.home-returning .view[data-page="home"].active .hero-line>span{transform:none;animation:none}
     body.home-returning .view[data-page="home"].active .hero-copy,
@@ -184,7 +179,6 @@
     body.home-returning .view[data-page="home"].active .feature-image:after{transform:scaleY(0);animation:none}
     @keyframes serviceTransition{0%{clip-path:inset(100% 0 0 0)}38%,62%{clip-path:inset(0 0 0 0)}100%{clip-path:inset(0 0 100% 0);visibility:hidden}}
     @keyframes homeTransition{0%{clip-path:inset(0 100% 0 0)}40%,62%{clip-path:inset(0 0 0 0)}100%{clip-path:inset(0 0 0 100%)}}
-    @keyframes homeTransitionMark{0%,29%{opacity:0;transform:translateY(18px)}43%,61%{opacity:1;transform:none}76%,100%{opacity:0;transform:translateY(-14px)}}
     @keyframes homeTransitionRule{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}
     @keyframes introType{from{transform:translateY(105%);opacity:0}to{transform:none;opacity:1}}
     @keyframes introExit{0%,55%{clip-path:inset(0 0 0 0)}100%{clip-path:inset(0 0 100% 0);visibility:hidden}}
@@ -242,7 +236,7 @@
 <body>
   <div class="intro-screen" aria-hidden="true"><span class="wordmark"><span class="wordmark-main">ken<span class="wordmark-serif">ira</span></span><span class="wordmark-inc">inc.</span></span></div>
   <div class="service-transition" aria-hidden="true"><span>FILM</span></div>
-  <div class="home-transition" aria-hidden="true"><span class="wordmark"><span class="wordmark-main">ken<span class="wordmark-serif">ira</span></span><span class="wordmark-inc">inc.</span></span></div>
+  <div class="home-transition" aria-hidden="true"></div>
   <div class="progress" aria-hidden="true"></div>
   <div class="noise" aria-hidden="true"></div>
   <header class="site-head">
