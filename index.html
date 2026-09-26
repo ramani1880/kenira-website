@@ -4,9 +4,39 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="color-scheme" content="light dark" />
-  <meta name="description" content="Kenira Inc. creates custom video production, photography, animation, aerial cinematography, and visual storytelling for ambitious organizations." />
+  <meta name="description" content="Kenira Inc. provides custom video production, photography, drone cinematography, motion graphics, virtual tours, time-lapse and visual storytelling." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Kenira Inc." />
+  <meta property="og:title" content="Video Production & Photography | Kenira Inc." />
+  <meta property="og:description" content="Custom film, photography, aerial cinematography and motion design for brands, filmmakers, real estate and industry." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Video Production & Photography | Kenira Inc." />
+  <meta name="twitter:description" content="Custom film, photography, aerial cinematography and motion design for brands, filmmakers, real estate and industry." />
   <link rel="icon" href="data:," />
-  <title>Kenira Inc. — Video, Photography & Motion</title>
+  <title>Video Production & Photography | Kenira Inc.</title>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Kenira Inc.",
+      "description": "Custom video production, photography, aerial cinematography, motion graphics, virtual tours, time-lapse and visual storytelling.",
+      "email": "Kenilramani@kenirainc.com",
+      "telephone": "+1-267-690-1880",
+      "areaServed": "New York and beyond",
+      "knowsAbout": [
+        "Video production",
+        "Photography",
+        "Drone cinematography",
+        "Motion graphics",
+        "Virtual video tours",
+        "Time-lapse production",
+        "Construction site monitoring",
+        "Testimonial videos"
+      ]
+    }
+  </script>
   <style>
     :root {
       color-scheme: light dark;
@@ -357,7 +387,7 @@
         document.querySelectorAll('.view').forEach(function(v){v.classList.toggle('active',v.getAttribute('data-page')===name)});
         document.querySelectorAll('.nav-link').forEach(function(a){var on=a.getAttribute('data-route')===name;a.classList.toggle('active',on);if(on)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
         menu.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='Menu';
-        window.scrollTo(0,0);document.title=(name==='home'?'Kenira Inc.':name.charAt(0).toUpperCase()+name.slice(1)+' — Kenira Inc.');
+        window.scrollTo(0,0);document.title=(name==='home'?'Video Production & Photography | Kenira Inc.':name.charAt(0).toUpperCase()+name.slice(1)+' | Kenira Inc.');
         requestAnimationFrame(reveal);
       }
       function onScroll(){
