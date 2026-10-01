@@ -28,7 +28,13 @@
       "description": "Custom video production, photography, aerial cinematography, motion graphics, virtual tours, time-lapse and visual storytelling.",
       "email": "Kenilramani@kenirainc.com",
       "telephone": "+1-267-690-1880",
-      "areaServed": "New York and beyond",
+      "areaServed": [
+        { "@type": "City", "name": "Philadelphia, PA" },
+        { "@type": "AdministrativeArea", "name": "Montgomery County, PA" }
+      ],
+      "sameAs": [
+        "https://news.prfree.org/@ramani1880/kenira-inc-expands-on-location-event-coverage-for-newsrooms-and-media-teams-c0dvje4f2mt2"
+      ],
       "knowsAbout": [
         "Video production",
         "Photography",
@@ -189,6 +195,9 @@
     .send-btn:hover{background:var(--signal);color:var(--white)}
     .form-status{font-size:13px;color:var(--muted)}
     footer{background:var(--signal);color:var(--white);padding:40px var(--pad);display:flex;justify-content:space-between;align-items:end;min-height:190px}
+    .legal-strip{background:var(--paper);color:var(--muted);padding:16px var(--pad) max(16px,env(safe-area-inset-bottom));display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;font-size:12px;border-top:1px solid var(--line)}
+    .legal-strip a{color:var(--muted);text-decoration:none}
+    .legal-strip a:hover{color:var(--ink)}
     footer b{font-size:clamp(28px,5vw,72px);font-weight:500;letter-spacing:-.055em;line-height:.85}
     footer span{font-size:12px;text-transform:uppercase;letter-spacing:.1em;text-align:right}
     .reveal{opacity:0;transform:translateY(58px);transition:opacity .85s cubic-bezier(.2,.72,.2,1),transform .85s cubic-bezier(.2,.72,.2,1)}
@@ -551,5 +560,6 @@
       form.addEventListener('input',function(e){if(e.target.matches('input,textarea')){e.target.removeAttribute('aria-invalid');var err=document.getElementById(e.target.name+'-error');if(err)err.textContent=''}});
     })();
   </script>
+      <div class="legal-strip"><span>© 2026 Kenira, Inc. · Service-area business — Philadelphia, PA &amp; Montgomery County</span><span><a href="/privacy.html">Privacy</a> &nbsp;·&nbsp; <a href="/terms.html">Terms</a></span></div>
 </body>
 </html>
