@@ -1,0 +1,23 @@
+# Field Notes — monthly topic rotation (Kenira, Inc. blog)
+# One post per month. Each topic used once. Cron picks the next unused topic,
+# drafts the post in Kenil's voice, and sends it to him for approval.
+# Rule: nothing goes live without Kenil's explicit approval.
+
+used:
+  - 2026-10: "Why newsrooms call me instead of sending a crew"
+  - 2026-10: "Five shots that sell a house (everything else is filler)"
+  - 2026-10: "Nobody watches your testimonial videos"
+
+upcoming:
+  - "What a drone actually adds to a wedding video (and what it doesn't)"
+  - "The 30-second homepage video: what to say and what to cut"
+  - "Why your product photos look cheap (it's the light, not the camera)"
+  - "Construction timelapse: what clients get wrong about timelines"
+  - "Headshots that don't look like mugshots"
+  - "How to brief a videographer so you don't waste the shoot day"
+  - "The difference between a $500 video and a $5,000 video"
+  - "What I pack for every shoot (and why)"
+  - "Editing is where the video gets made"
+  - "Why vertical video isn't optional anymore"
+  - "The pre-shoot call that saves every project"
+  - "What businesses get wrong about 'viral' video"

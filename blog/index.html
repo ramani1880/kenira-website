@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Field Notes — a monthly blog from Kenira, Inc.</title>
+<meta name="description" content="Field Notes: a monthly blog from Kenira, Inc. Short, practical writing on video production, photography, and getting seen. New every month.">
+<link rel="icon" href="/favicon.ico">
+<style>
+:root{--paper:#121310;--ink:#f2f1e9;--muted:#aaa99e;--line:#3b3c36;--signal:#ff5438;--white:#f7f6ef;--pad:20px;--serif:Georgia,"Times New Roman",serif}
+*{margin:0;padding:0;box-sizing:border-box}
+html{background:var(--paper)}
+body{background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:960px;margin:0 auto;padding:0 var(--pad)}
+.site-head{height:84px;display:flex;align-items:center;justify-content:space-between;padding:0 var(--pad);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:80;background:rgba(18,19,16,.92);backdrop-filter:blur(14px)}
+.discipline{text-decoration:none;display:flex;align-items:center;gap:15px}
+.wordmark{display:inline-flex;align-items:flex-end;white-space:nowrap;line-height:.72;color:var(--ink)}
+.wordmark-main{font-size:31px;font-weight:750;letter-spacing:-.095em}
+.wordmark-serif{font-family:var(--serif);font-weight:400;font-style:italic;color:var(--signal);letter-spacing:-.11em}
+.wordmark-inc{font-size:7px;line-height:1;text-transform:uppercase;letter-spacing:.11em;margin:0 0 1px 8px;padding-bottom:2px;border-bottom:1px solid currentColor}
+.nav{display:flex;align-items:center;gap:6px}
+.nav-link{text-decoration:none;padding:10px 13px;font-size:15px;color:var(--muted)}
+.nav-link:hover,.nav-link.active{color:var(--ink)}
+.masthead{padding:88px 0 56px;border-bottom:1px solid var(--line)}
+.masthead-row{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:22px;flex-wrap:wrap}
+.kicker{font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:var(--signal)}
+.cadence{font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:var(--muted);border:1px solid var(--line);border-radius:100px;padding:8px 16px;white-space:nowrap}
+.masthead h1{font-size:clamp(52px,9vw,96px);line-height:.98;letter-spacing:-.045em;font-weight:750}
+.masthead h1 em{font-family:var(--serif);font-weight:400;font-style:italic;color:var(--signal);letter-spacing:-.02em}
+.masthead .lede{color:var(--muted);font-size:19px;margin-top:20px;max-width:58ch}
+.feature{display:grid;grid-template-columns:1fr;gap:0;text-decoration:none;border-bottom:1px solid var(--line);padding:52px 0}
+.feature .tag{font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:var(--signal);margin-bottom:16px}
+.feature h2{font-size:clamp(30px,5vw,52px);line-height:1.06;letter-spacing:-.035em;font-weight:750;max-width:20ch;margin-bottom:18px}
+.feature h2 .arrow{color:var(--signal);font-weight:400;transition:margin-left .2s}
+.feature:hover h2 .arrow{margin-left:10px}
+.feature p{color:var(--muted);font-size:18px;max-width:60ch}
+.feature .meta{margin-top:18px;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+.earlier{padding:16px 0 8px}
+.earlier-head{font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:var(--muted);padding:28px 0 6px}
+.row{display:flex;gap:26px;align-items:baseline;text-decoration:none;padding:30px 0;border-bottom:1px solid var(--line)}
+.row .num{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--signal);min-width:44px}
+.row .row-body{flex:1}
+.row h3{font-size:clamp(21px,3.4vw,30px);letter-spacing:-.025em;line-height:1.15;font-weight:700;margin-bottom:8px}
+.row:hover h3{text-decoration:underline;text-decoration-color:var(--signal);text-underline-offset:5px}
+.row p{color:var(--muted);font-size:15.5px;max-width:62ch}
+.row .meta{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-top:10px;white-space:nowrap}
+.newsletter{margin:72px 0 0;border:1px solid var(--line);border-radius:18px;padding:48px 44px;background:linear-gradient(180deg,#1a1b15,#141510);position:relative;overflow:hidden}
+.newsletter:before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--signal)}
+.newsletter .kicker{margin-bottom:12px}
+.newsletter h2{font-size:clamp(26px,4vw,36px);letter-spacing:-.03em;margin-bottom:10px}
+.newsletter h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--signal)}
+.newsletter p{color:var(--muted);font-size:16px;margin-bottom:24px;max-width:52ch}
+.newsletter form{display:flex;gap:10px;flex-wrap:wrap}
+.newsletter input[type=email]{flex:1;min-width:220px;background:var(--paper);border:1px solid var(--line);border-radius:100px;color:var(--ink);padding:15px 22px;font-size:15px}
+.newsletter input[type=email]:focus{outline:2px solid var(--signal);border-color:transparent}
+.newsletter button{background:var(--signal);color:var(--white);border:0;border-radius:100px;padding:15px 32px;font-size:15px;font-weight:650;cursor:pointer}
+.newsletter button:hover{background:#e0442c}
+.newsletter small{display:block;margin-top:16px;color:var(--muted);font-size:12px}
+.site-foot{border-top:1px solid var(--line);margin-top:80px;padding:28px 0 44px;color:var(--muted);font-size:13px}
+.site-foot .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.site-foot a{text-decoration:none}
+.site-foot a:hover{color:var(--ink)}
+@media(max-width:760px){
+  .site-head{height:68px}
+  .wordmark-main{font-size:27px}
+  .nav-link{padding:10px 8px;font-size:14px}
+  .masthead{padding:60px 0 40px}
+  .cadence{font-size:10px}
+  .feature{padding:40px 0}
+  .row{gap:16px}
+  .row .num{min-width:34px;font-size:17px}
+  .newsletter{padding:36px 24px;margin-top:56px}
+  .newsletter form{flex-direction:column}
+  .newsletter button{width:100%}
+}
+</style>
+</head>
+<body>
+<header class="site-head">
+  <a class="discipline" href="/" aria-label="Kenira Inc — home"><span class="wordmark" aria-hidden="true"><span class="wordmark-main">ken<span class="wordmark-serif">ira</span></span><span class="wordmark-inc">inc.</span></span></a>
+  <nav class="nav" aria-label="Blog navigation">
+    <a class="nav-link" href="/">Home</a>
+    <a class="nav-link active" href="/blog/">Blog</a>
+    <a class="nav-link" href="/#contact">Contact</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="masthead">
+    <div class="masthead-row">
+      <div class="kicker">Kenira, Inc. — Field Notes</div>
+      <div class="cadence">New every month</div>
+    </div>
+    <h1>Notes from <em>the field.</em></h1>
+    <p class="lede">A monthly blog on video production, photography, and getting seen. Short, practical, no jargon — the stuff we actually tell clients.</p>
+  </div>
+
+  <a class="feature" href="/blog/why-newsrooms-call-me-instead-of-sending-a-crew.html">
+    <div class="tag">This month</div>
+    <h2>Why newsrooms call me instead of sending a crew <span class="arrow">→</span></h2>
+    <p>Your 6pm producer needs a press conference covered at 2. Your crew is already on a fire in Norristown. That's the whole business, right there.</p>
+    <div class="meta">October 1, 2026 · 2 min read</div>
+  </a>
+
+  <div class="earlier">
+    <div class="earlier-head">Earlier</div>
+
+    <a class="row" href="/blog/five-shots-that-sell-a-house.html">
+      <span class="num">02</span>
+      <span class="row-body">
+        <h3>Five shots that sell a house (everything else is filler)</h3>
+        <p>I've shot enough listings to know the pattern. The videos that move buyers all have the same five shots. The ones that sit for 90 days don't.</p>
+        <div class="meta">October 1, 2026 · 2 min read</div>
+      </span>
+    </a>
+
+    <a class="row" href="/blog/nobody-watches-your-testimonial-videos.html">
+      <span class="num">03</span>
+      <span class="row-body">
+        <h3>Nobody watches your testimonial videos</h3>
+        <p>It's not the camera. It's the conference room. Here's what actually gets a customer to sound like a person instead of a hostage.</p>
+        <div class="meta">October 1, 2026 · 2 min read</div>
+      </span>
+    </a>
+  </div>
+
+  <section class="newsletter" id="newsletter">
+    <div class="kicker">The monthly email</div>
+    <h2>One short email, <em>every month.</em></h2>
+    <p>Once a month: the new post, plus one thing worth knowing in production. No spam, unsubscribe anytime.</p>
+    <form action="https://formspree.io/f/xwlpnyjb" method="POST">
+      <input type="hidden" name="_subject" value="New Kenira blog newsletter signup">
+      <input type="hidden" name="form-type" value="newsletter">
+      <input type="email" name="email" placeholder="you@example.com" required aria-label="Email address">
+      <button type="submit">Subscribe</button>
+    </form>
+    <small>We never share your email with anyone. Ever.</small>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <span>© 2026 Kenira, Inc.</span>
+    <span><a href="/">Home</a> &nbsp;·&nbsp; <a href="/blog/">Blog</a> &nbsp;·&nbsp; <a href="/#contact">Contact</a></span>
+  </div>
+</footer>
+</body>
+</html>
