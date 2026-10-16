@@ -36,6 +36,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://kenirainc.com/blog/the-light-goes-up-before-the-camera-comes-out.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://kenirainc.com/privacy.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
