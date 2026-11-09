@@ -48,6 +48,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://kenirainc.com/blog/why-your-product-photos-look-cheap.html</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://kenirainc.com/privacy.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
